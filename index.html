@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI工具导航 - 发现最好用的AI工具</title>
+    <meta name="description" content="AI工具导航站，收录50+款免费好用的AI工具，涵盖AI写作、AI绘画、AI编程、AI视频、AI办公、AI学习等分类">
+    <meta name="keywords" content="AI工具,AI导航,免费AI工具,ChatGPT,DeepSeek,AI绘画,AI编程">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== 顶部导航 ===== -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🤖</span>
+                    <h1>AI工具导航</h1>
+                </div>
+                <nav class="nav" id="mainNav">
+                    <a href="#categories" class="nav-link">分类</a>
+                    <a href="#all-tools" class="nav-link">全部工具</a>
+                    <a href="#submit" class="nav-link">提交工具</a>
+                    <a href="#about" class="nav-link">关于</a>
+                </nav>
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== 英雄区域 ===== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>
+                    发现 <span class="gradient-text">最好用</span> 的<br>AI 工具
+                </h2>
+                <p>收录 <span id="toolCount">0</span>+ 款免费好用的 AI 工具，帮你找到最适合的那一个</p>
+                
+                <div class="search-box">
+                    <input type="text" class="search-input" id="searchInput" placeholder="搜索AI工具，如 ChatGPT、DeepSeek...">
+                    <button class="search-btn" id="searchBtn">🔍 搜索</button>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="toolCount2">0</span>
+                        <span class="stat-label">收录工具</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">分类</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">免费</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 分类区域 ===== -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">工具分类</h2>
+            <p class="section-desc">按分类快速找到你需要的 AI 工具</p>
+            <div class="category-grid" id="categoryGrid">
+                <!-- 由 JavaScript 动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 全部工具 ===== -->
+    <section class="all-tools" id="all-tools">
+        <div class="container">
+            <h2 class="section-title">全部工具</h2>
+            <p class="section-desc">精选 <span id="toolCount3">0</span> 款免费好用的 AI 工具</p>
+            
+            <div class="filter-bar">
+                <button class="filter-btn active" data-category="all">全部</button>
+                <button class="filter-btn" data-category="writing">✍️ AI写作</button>
+                <button class="filter-btn" data-category="image">🎨 AI绘画</button>
+                <button class="filter-btn" data-category="code">💻 AI编程</button>
+                <button class="filter-btn" data-category="video">🎬 AI视频</button>
+                <button class="filter-btn" data-category="office">📊 AI办公</button>
+                <button class="filter-btn" data-category="study">🎓 AI学习</button>
+            </div>
+
+            <div class="tools-grid" id="toolsGrid">
+                <!-- 由 JavaScript 动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 提交工具 ===== -->
+    <section class="submit-section" id="submit">
+        <div class="container">
+            <h2 class="section-title">提交工具</h2>
+            <p class="section-desc">发现了好用的 AI 工具？推荐给我们吧！</p>
+            
+            <div class="submit-form">
+                <div class="form-group">
+                    <input type="text" class="form-input" id="toolName" placeholder="工具名称 *" required>
+                </div>
+                <div class="form-group">
+                    <input type="url" class="form-input" id="toolUrl" placeholder="工具网址（如 https://example.com）*" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-textarea" id="toolDesc" placeholder="工具简介（50字以内）*" required></textarea>
+                </div>
+                <div class="form-group">
+                    <select class="form-select" id="toolCategory">
+                        <option value="">选择分类 *</option>
+                        <option value="writing">AI写作</option>
+                        <option value="image">AI绘画</option>
+                        <option value="code">AI编程</option>
+                        <option value="video">AI视频</option>
+                        <option value="office">AI办公</option>
+                        <option value="study">AI学习</option>
+                    </select>
+                </div>
+                <button class="submit-btn" id="submitBtn">提交推荐</button>
+                <p class="form-tip">提交后我会尽快审核添加，感谢你的贡献！</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 关于 ===== -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">关于本站</h2>
+                <p>AI工具导航是一个收录免费好用的 AI 工具的导航站。</p>
+                <p>我是一名大学生，通过 AI 工具来学习和创作。我发现网上有很多优秀的 AI 工具，但分散在各个地方，于是决定做一个导航站，方便大家发现和使用。</p>
+                <p>所有收录的工具都是我自己用过或调研过的，确保真实可用。</p>
+                <div class="about-links">
+                    <a href="#" class="about-link">📧 联系我</a>
+                    <a href="#" class="about-link">📝 更新日志</a>
+                    <a href="#" class="about-link">⭐ 收藏本站</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 页脚 ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>© 2026 AI工具导航 · 发现最好用的AI工具</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">隐私政策</a>
+                    <a href="#">使用条款</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== 回到顶部 ===== -->
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <!-- ===== 脚本 ===== -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
