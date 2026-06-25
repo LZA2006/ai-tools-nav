@@ -471,6 +471,17 @@ const toolsData = [
         tags: ['free'],
         categoryName: 'AI办公'
     },
+    {
+        id: 51,
+        name: 'Remio',
+        icon: '🧠',
+        iconBg: 2,
+        url: 'https://remio.ai',
+        desc: '本地优先的 AI 记忆与个人知识库桌面应用，可解析文件、网页、录音、邮件、聊天记录、图片和笔记，并建立本地索引与向量用于快速检索个人上下文',
+        category: 'office',
+        tags: ['new'],
+        categoryName: 'AI办公'
+    },
 
     // ===== AI学习 =====
     {
