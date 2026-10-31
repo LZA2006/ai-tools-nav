@@ -292,6 +292,18 @@ const toolsData = [
         categoryName: 'AI编程'
     },
 
+    {
+        id: 51,
+        name: 'agent-qa',
+        icon: '🧪',
+        iconBg: 4,
+        url: 'https://vostride.com',
+        desc: '网页与移动端 AI 测试，具备 memidex 持久记忆、经验证的自我改进、MCP 接入与可回看的运行证据；模型费用另计',
+        category: 'code',
+        tags: [],
+        categoryName: 'AI编程'
+    },
+
     // ===== AI视频 =====
     {
         id: 27,
